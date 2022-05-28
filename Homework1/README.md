@@ -17,8 +17,9 @@ https://www.udemy.com/course/golang-restful-api-programlama/
 
 
 
+![image](https://user-images.githubusercontent.com/98224771/170833382-edef64a5-fa65-4a7b-b1a2-4ff7e6d3ab22.png)
 
-![image](https://user-images.githubusercontent.com/98224771/170831766-3575a3a9-c64c-4ace-b6e7-f9753b6cff39.png)
+
 
 
 #LOGIN PAGE
