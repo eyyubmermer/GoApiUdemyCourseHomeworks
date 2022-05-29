@@ -27,7 +27,21 @@ func main() {
 		} else if pwd != pwdConfirm {
 			fmt.Fprint(w, "Şifreler uyuşmuyor.")
 		} else {
-			fmt.Fprintf(w, "Kullanıcı adı: %s, email: %s, pwd: %s, pwdConfirm: %s", uName, eMail, pwd, pwdConfirm)
+			fmt.Fprintf(w, "Kayıt başarılı. \nKullanıcı adı: %s, \nemail: %s, \npwd: %s, \npwdConfirm: %s", uName, eMail, pwd, pwdConfirm)
+		}
+	})
+	logName, logpwd := "", ""
+
+	mux.HandleFunc("/login", func(w http.ResponseWriter, r *http.Request) {
+		r.ParseForm()
+
+		logName = r.FormValue("username")
+		logpwd = r.FormValue("pwd")
+
+		if logName == uName && logpwd == pwd {
+			fmt.Fprintf(w, "Giriş başarılı.")
+		} else {
+			fmt.Fprintf(w, "Giriş başarısız.")
 		}
 	})
 
